@@ -6,7 +6,8 @@
                 content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Index</title>
-        <link rel="stylesheet" href="../../../node_modules/bulma/css/bulma.css">
+        <link rel="stylesheet" href="/node_modules/bulma/css/bulma.css">
+        <link rel="stylesheet" href="/public/css/app.css">
     </head>
     <body>
         <nav class="navbar">
@@ -24,11 +25,16 @@
             <div class="navbar-menu">
                 <div class="navbar-start">
                     <a href="/" class="navbar-item">Home</a>
+                    <a href="/auth/login" class="navbar-item">Login</a>
                 </div>
             </div>
         </nav>
         <div class="container is-fluid">
             {{ template "content" .}}
         </div>
+
+
+        <script src="/public/js/tabs.js"></script>
+        {{ template "scripts" .}}
     </body>
 </html>
