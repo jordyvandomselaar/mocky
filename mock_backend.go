@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"log"
+	"net/http"
+	"github.com/jordyvandomselaar/mock-backend/App/controllers"
+)
 
 func main() {
-	fmt.Println("Hello")
+	homeController := controllers.HomeController{}
+
+	http.HandleFunc("/", homeController.Home)
+	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
+
+
