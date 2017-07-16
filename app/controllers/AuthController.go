@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"net/http"
 	"github.com/jordyvandomselaar/mock-backend/app/helpers"
+	"net/http"
 )
 
 type AuthController struct {

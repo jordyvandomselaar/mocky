@@ -9,12 +9,6 @@ type ViewManager struct {
 	Authenticate *template.Template
 }
 
-//func (view *View) Render(writer http.ResponseWriter, data interface{}) {
-//	tpl, err := template.ParseFiles("app/Views/layouts/app.gohtml", "app/views/"+view.Path+".gohtml")
-//	errors.Handle(err)
-//	tpl.Execute(os.Stdout, data)
-//}
-
 func NewViewManager() *ViewManager {
 	return &ViewManager{
 		Home:         MustParseView("home/index"),
