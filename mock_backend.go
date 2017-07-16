@@ -21,6 +21,7 @@ func main() {
 
 	// Define our routes
 	router.HandleFunc("/", homeController.Home)
+	router.HandleFunc("/about", homeController.About)
 	router.HandleFunc("/auth/authenticate", authController.ShowLogin)
 
 	// Register handlers

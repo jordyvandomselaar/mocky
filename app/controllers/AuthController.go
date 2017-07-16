@@ -3,6 +3,7 @@ package controllers
 import (
 	"github.com/jordyvandomselaar/mock-backend/app/helpers"
 	"net/http"
+	"log"
 )
 
 type AuthController struct {
@@ -13,5 +14,8 @@ type AuthController struct {
 
 func (ac *AuthController) ShowLogin(w http.ResponseWriter, r *http.Request) {
 	viewManager := helpers.NewViewManager()
-	viewManager.Authenticate.Execute(w, nil)
+	err := viewManager.Authenticate.Execute(w, nil)
+	if err != nil {
+		log.Println(err)
+	}
 }

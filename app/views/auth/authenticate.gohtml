@@ -11,10 +11,62 @@
     <div id="tabs">
         <div data-tab="login">
             <h2>Login</h2>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label for="login-email" class="label">Email</label>
+                </div>
+                <div class="field-body">
+                    <input id="login-email" type="text" class="input" name="email">
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label for="login-password" class="label">Password</label>
+                </div>
+                <div class="field-body">
+                    <input id="login-password" type="password" class="input" name="password">
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label"></div>
+                <div class="field-body">
+                    <button class="button is-primary">Login</button>
+                </div>
+            </div>
         </div>
         <div data-tab="register">
             <h2>Register</h2>
+
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label for="register-email" class="label">Email</label>
+                </div>
+                <div class="field-body">
+                    <input id="register-email" type="text" class="input" name="email">
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label for="register-password" class="label">Password</label>
+                </div>
+                <div class="field-body">
+                    <input id="register-password" type="password" class="input" name="password">
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label"></div>
+                <div class="field-body">
+                    <button class="button is-primary">Register</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+{{ end }}
+
+{{ define "scripts" }}
 {{ end }}

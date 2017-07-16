@@ -7,11 +7,13 @@ import (
 type ViewManager struct {
 	Home         *template.Template
 	Authenticate *template.Template
+	About        *template.Template
 }
 
 func NewViewManager() *ViewManager {
 	return &ViewManager{
 		Home:         MustParseView("home/index"),
+		About:        MustParseView("home/about"),
 		Authenticate: MustParseView("auth/authenticate"),
 	}
 }
