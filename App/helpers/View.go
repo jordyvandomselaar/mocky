@@ -1,9 +1,9 @@
 package helpers
 
 import (
+	"github.com/jordyvandomselaar/mock-backend/App/helpers/errors"
 	"html/template"
 	"net/http"
-	"github.com/jordyvandomselaar/mock-backend/App/helpers/errors"
 )
 
 type View struct {

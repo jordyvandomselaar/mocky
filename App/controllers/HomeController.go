@@ -7,7 +7,7 @@ import (
 
 type HomeController struct{}
 
-func (hc HomeController) Home(writer http.ResponseWriter, request *http.Request) {
+func (hc *HomeController) Home(writer http.ResponseWriter, request *http.Request) {
 	view := helpers.View{Path: "App/views/home/index"}
 	view.Render(writer, nil)
 }
