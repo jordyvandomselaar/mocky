@@ -24,11 +24,11 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-start">
-                    <a href="/" class="navbar-item">Home</a>
-                    <a href="/auth/authenticate#tab=login" class="navbar-item">Authenticate</a>
+                    <a href="{{ .Urls.Home }}" class="navbar-item">Home</a>
+                    <a href="{{ .Urls.Authenticate }}" class="navbar-item">Authenticate</a>
                 </div>
                 <div class="navbar-end">
-                    <a href="/about" class="navbar-item">About</a>
+                    <a href="{{ .Urls.About }}" class="navbar-item">About</a>
                 </div>
             </div>
         </nav>

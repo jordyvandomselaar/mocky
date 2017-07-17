@@ -1,17 +1,17 @@
-package helpers
+package managers
 
 import (
 	"html/template"
 )
 
-type ViewManager struct {
+type View struct {
 	Home         *template.Template
 	Authenticate *template.Template
 	About        *template.Template
 }
 
-func NewViewManager() *ViewManager {
-	return &ViewManager{
+func NewViewManager() *View {
+	return &View{
 		Home:         MustParseView("home/index"),
 		About:        MustParseView("home/about"),
 		Authenticate: MustParseView("auth/authenticate"),
