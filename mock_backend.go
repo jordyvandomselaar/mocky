@@ -12,7 +12,7 @@ import (
 
 func main() {
 	// GORM
-	gormServiceProvider := serviceProviders.NewGormServiceProvder()
+	gormServiceProvider := serviceProviders.NewGormServiceProvider()
 	defer gormServiceProvider.Db.Close()
 
 	// View Manager

@@ -2,6 +2,7 @@ package models
 
 import "github.com/jinzhu/gorm"
 
+// User is a model for the tabel users.
 type User struct {
 	gorm.Model
 

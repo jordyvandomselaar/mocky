@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+// InitHomeRoutes initializes the home routes
 func InitHomeRoutes(router *mux.Router, viewManager *managers.View) {
 	urlManager := managers.NewUrlManager()
 	homeController := controllers.NewHomeController(viewManager)
@@ -15,7 +16,7 @@ func InitHomeRoutes(router *mux.Router, viewManager *managers.View) {
 	// Define our routes
 	router.HandleFunc(getUrl(urlManager.Home), homeController.Home)
 	router.HandleFunc(getUrl(urlManager.About), homeController.About)
-	router.HandleFunc(getUrl(urlManager.Authenticate), authController.ShowLogin)
+	router.HandleFunc(getUrl(urlManager.Authenticate), authController.ShowAuthenticate)
 
 }
 

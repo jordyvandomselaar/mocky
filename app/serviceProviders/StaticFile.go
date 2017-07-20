@@ -2,6 +2,7 @@ package serviceProviders
 
 import "net/http"
 
+// InitStaticFileServiceProvider inititializes the service provider for static files so the webserver returns static files when the url matches a file.
 func InitStaticFileServiceProvider() {
 
 	// Handlers for public files

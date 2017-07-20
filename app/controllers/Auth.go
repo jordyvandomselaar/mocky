@@ -7,6 +7,7 @@ import (
 	"net/http"
 )
 
+// Auth handles the authentication of users.
 type Auth struct {
 	Base
 
@@ -15,7 +16,8 @@ type Auth struct {
 	Email    string
 }
 
-func (ac *Auth) ShowLogin(w http.ResponseWriter, r *http.Request) {
+// ShowLogin renders the authentication page.
+func (ac *Auth) ShowAuthenticate(w http.ResponseWriter, r *http.Request) {
 	data := viewModels.NewAuthenticate()
 	err := ac.ViewManager.Authenticate.Execute(w, data)
 
@@ -24,6 +26,7 @@ func (ac *Auth) ShowLogin(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// NewAuthController returns a new instance of the Auth controller.
 func NewAuthController(viewManager *managers.View) Auth {
 	return Auth{
 		Base: NewBaseController(viewManager),
