@@ -8,10 +8,10 @@ import (
 )
 
 // InitHomeRoutes initializes the home routes
-func InitHomeRoutes(router *mux.Router, viewManager *managers.View) {
+func InitHomeRoutes(router *mux.Router, templateManager managers.Template) {
 	urlManager := managers.NewUrlManager()
-	homeController := controllers.NewHomeController(viewManager)
-	authController := controllers.NewAuthController(viewManager)
+	homeController := controllers.NewHomeController(templateManager)
+	authController := controllers.NewAuthController(templateManager)
 
 	// Define our routes
 	router.HandleFunc(getUrl(urlManager.Home), homeController.Home)

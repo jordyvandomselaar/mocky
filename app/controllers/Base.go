@@ -4,12 +4,12 @@ import "github.com/jordyvandomselaar/mock-backend/app/managers"
 
 // Base controller.
 type Base struct {
-	ViewManager *managers.View
+	TemplateManager managers.Template
 }
 
 // NewBaseController returns a new Base controller.
-func NewBaseController(viewManager *managers.View) Base {
+func NewBaseController(templateManager managers.Template) Base {
 	return Base{
-		ViewManager: viewManager,
+		TemplateManager: templateManager,
 	}
 }

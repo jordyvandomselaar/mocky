@@ -15,13 +15,13 @@ func main() {
 	gormServiceProvider := serviceProviders.NewGormServiceProvider()
 	defer gormServiceProvider.Db.Close()
 
-	// View Manager
-	viewManager := managers.NewViewManager()
+	// Template Manager
+	templateManager := managers.NewTemplateManager()
 
 	// Router
 	router := mux.NewRouter()
 
-	routes.InitHomeRoutes(router, viewManager)
+	routes.InitHomeRoutes(router, templateManager)
 	serviceProviders.InitRouteServiceProvider(router)
 	serviceProviders.InitStaticFileServiceProvider()
 

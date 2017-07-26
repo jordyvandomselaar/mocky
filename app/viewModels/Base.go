@@ -4,7 +4,7 @@ import "github.com/jordyvandomselaar/mock-backend/app/managers"
 
 // Base is the base viewmodel.
 type Base struct {
-	Urls *managers.Url
+	Urls managers.Url
 }
 
 // NewBase returns a new Base viewmodel.

@@ -8,8 +8,8 @@ type Url struct {
 }
 
 // NewUrlManager returns a new Url manager.
-func NewUrlManager() *Url {
-	return &Url{
+func NewUrlManager() Url {
+	return Url{
 		Home:         "/",
 		Authenticate: "/authenticate#tab=login",
 		About:        "/about",
