@@ -2,6 +2,8 @@ package serviceProviders
 
 import (
 	"github.com/gorilla/mux"
+	"github.com/jordyvandomselaar/mock-backend/app/managers"
+	"github.com/jordyvandomselaar/mock-backend/app/routes"
 	"net/http"
 )
 
@@ -9,4 +11,10 @@ import (
 func InitRouteServiceProvider(router *mux.Router) {
 	// Register handlers
 	http.Handle("/", router)
+}
+
+// Initialize routes
+func InitRoutes(router *mux.Router, templateManager managers.Template) {
+	routes.InitHomeRoutes(router, templateManager)
+	routes.InitAuthRoutes(router, templateManager)
 }

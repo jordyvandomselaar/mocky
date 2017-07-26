@@ -4,7 +4,6 @@ import (
 	"github.com/gorilla/mux"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/jordyvandomselaar/mock-backend/app/managers"
-	"github.com/jordyvandomselaar/mock-backend/app/routes"
 	"github.com/jordyvandomselaar/mock-backend/app/serviceProviders"
 	"log"
 	"net/http"
@@ -21,7 +20,7 @@ func main() {
 	// Router
 	router := mux.NewRouter()
 
-	routes.InitHomeRoutes(router, templateManager)
+	serviceProviders.InitRoutes(router, templateManager)
 	serviceProviders.InitRouteServiceProvider(router)
 	serviceProviders.InitStaticFileServiceProvider()
 

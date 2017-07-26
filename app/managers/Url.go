@@ -1,5 +1,7 @@
 package managers
 
+import "strings"
+
 // Url manager allows aliasing of routes and prevents mistakes.
 type Url struct {
 	Home         string
@@ -14,4 +16,9 @@ func NewUrlManager() Url {
 		Authenticate: "/authenticate#tab=login",
 		About:        "/about",
 	}
+}
+
+// ParseUrl splits the url on #
+func ParseUrl(url string) string {
+	return strings.Split(url, "#")[0]
 }
